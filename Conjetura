@@ -1,0 +1,45 @@
+package aver;
+import java.util.Scanner;
+
+public class hola {
+	public static void main(String args[]) {
+		  double  n;
+		  double contador = -1;
+		        Scanner conjetura = new Scanner(System.in);
+		        System.out.println("Ingrese rango de numero");
+		        n = conjetura.nextInt();
+		double  x =0;
+		double y =0;
+		double solucion;
+		String si;
+
+		for(double i=1;i<n+1;i++){
+		    contador++;
+		if(i==1 || i==2){
+		System.out.println("1, ");
+		x=1;
+		y=1;
+		}
+		else{
+		solucion=x+y;
+		double a=0;
+		for (double l = 1; l <= solucion; l++) {
+		                if (solucion % l == 0) {
+		                    a++;
+
+		                }
+		            }
+		            if (a == 2) {
+		                si = "SI";
+		                System.out.println(solucion+" , "+contador+"   "+si);
+		            } else {
+		                si = "NO";
+		                System.out.println("F         "+solucion+" " + contador);
+		            }
+
+		x=y;
+		y=solucion;
+		}
+
+		}
+}}
